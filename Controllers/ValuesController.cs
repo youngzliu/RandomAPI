@@ -12,9 +12,10 @@ namespace RandomApi.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<int> Get()
         {
-            return new string[] { "value1", "value2" };
+            Random rnd = new Random();
+            return rnd.Next(0, 2);
         }
 
         // GET api/values/5
